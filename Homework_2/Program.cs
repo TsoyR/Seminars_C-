@@ -29,38 +29,38 @@ Console.WriteLine($"Second digit of number {number} is {num_result}");
 
 //32679 -> 6
 
-/*
+
 Console.Write("Input number: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
 
 void ThirdDigit(int number)
 {
-    if (number > 99)
+    int whole_number = number / 10;
+    while (whole_number < 99 && whole_number > 9)
     {
-        int residue = number % 1;
-        if ( residue == 0) 
-        {
-            int third_number = number % 10;
-            Console.WriteLine($"{third_number}");
-        }
-        else
-        {
-            int result = residue / 10;
-            Console.WriteLine($"{result}");
-        }
-
+    
+        whole_number = number / 10;
+        break;
+    }
+    if (whole_number < 9)
+    {
+        Console.WriteLine("Нет такой цифры");
     }
     else
     {
-        Console.WriteLine("Нет такой цифры");
-
-    }
+    int res = number % 10;
+    Console.WriteLine(res);
+    }    
+    
 }
+
+
+
 
 ThirdDigit(number);
 
-*/
+/*
 
 //Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
@@ -85,3 +85,4 @@ void Weekend(int number)
 }
 
 Weekend(number);
+*/
